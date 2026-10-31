@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: nagin-gta-forum
+    runtime: python
+    plan: free            # на free-плані дані стираються при перезапуску; для постійних даних: plan: starter + disk нижче
+    buildCommand: "echo ok"
+    startCommand: "python server.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13.0"
+      - key: NAGIN_DATA
+        value: /var/data
+    # Розкоментуйте разом з plan: starter, щоб база й аватари зберігалися:
+    # disk:
+    #   name: nagin-data
+    #   mountPath: /var/data
+    #   sizeGB: 1

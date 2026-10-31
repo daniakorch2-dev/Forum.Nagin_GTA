@@ -1,0 +1,7 @@
+{
+  "host": "127.0.0.1",
+  "port": 8080,
+  "base_url": "http://127.0.0.1:8080",
+  "require_email_verification": true,
+  "smtp": {"host": "", "port": 587, "security": "starttls", "user": "", "password": "", "from": "NAGIN GTA <no-reply@example.com>"}
+}
